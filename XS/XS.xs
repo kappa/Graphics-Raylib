@@ -12,6 +12,8 @@
 
 MODULE = Graphics::Raylib::XS		PACKAGE = Graphics::Raylib::XS		
 
+PROTOTYPES: DISABLE
+
 INCLUDE: const-xs.inc
 
 void
@@ -1918,3 +1920,27 @@ UpdateTextureFromImage(texture, image)
 	Image image
   CODE:
 	UpdateTexture(texture, GetImageData(image));
+
+# Function pointer exports for compatibility
+# These are function pointers in modern raylib, exported as integer addresses
+
+IV
+FormatText()
+  CODE:
+    RETVAL = (IV)FormatText;
+  OUTPUT:
+    RETVAL
+
+IV
+ShowWindow()
+  CODE:
+    RETVAL = (IV)ShowWindow;
+  OUTPUT:
+    RETVAL
+
+IV
+SubText()
+  CODE:
+    RETVAL = (IV)SubText;
+  OUTPUT:
+    RETVAL

@@ -148,3 +148,15 @@ sub tonum {
     my $self = shift;
     return $self->keycode;
 }
+
+=head1 NAME
+
+Graphics::Raylib::Key - Keyboard Key class
+
+=head1 DESCRIPTION
+
+This module provides a class for handling keyboard keys in Graphics::Raylib.
+
+=cut
+
+1;

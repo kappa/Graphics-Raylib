@@ -39,10 +39,9 @@ if  (eval {require ExtUtils::Constant; 1}) {
   # you will need to use the generated const-c.inc and const-xs.inc
   # files to replace their "fallback" counterparts before distributing your
   # changes.
-  my @names = (qw(DEG2RAD FormatText LOC_MAP_DIFFUSE LOC_MAP_SPECULAR
+  my @names = (qw(DEG2RAD LOC_MAP_DIFFUSE LOC_MAP_SPECULAR
 		 MAP_DIFFUSE MAP_SPECULAR MAX_MATERIAL_MAPS
-		 MAX_SHADER_LOCATIONS MAX_TOUCH_POINTS RAD2DEG ShowWindow
-		 SubText),
+		 MAX_SHADER_LOCATIONS MAX_TOUCH_POINTS RAD2DEG),
               {name=>"BLEND_ADDITIVE", macro=>"1"},
               {name=>"BLEND_ALPHA", macro=>"1"},
               {name=>"BLEND_MULTIPLIED", macro=>"1"},
